@@ -6,19 +6,16 @@ function click1(event) {
 	}
 
 	let good__price = parseInt(document.getElementById('good').value)
-	let m = document.getElementById('amount').value.match(/^[1-9]\d*$/)
-	if (m === null) {
-		alert('Введите целое число')
-		return
-	}
 
-	let good__amount = parseInt(m)
+	let good__amount = parseInt(document.getElementById('amount').value)
+
 	let res = document.getElementById('result')
 	res.textContent = String('Стоимость равна ' + good__price * good__amount)
-	return false
 }
 
-window.addEventListener('DOMContentLoaded', function () {
-	let b = document.getElementById('button')
-	b.addEventListener('click', click1)
-})
+let b = document.getElementById('button')
+
+b.addEventListener('click', click1)
+
+
+
